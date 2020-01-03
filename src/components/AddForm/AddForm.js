@@ -14,11 +14,12 @@ export default function AddForm(props) {
 
   const onAdd = event => {
     event.preventDefault();
-    if (todo !== "") {
+    if (todo !== "" && allTodos) {
       let arrTodos = [];
       arrTodos = allTodos;
       arrTodos.push(todo);
       addTodo(arrTodos);
+      setTodo("");
     }
   };
 

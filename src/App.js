@@ -7,7 +7,8 @@ function App() {
   const [allTodos, setAllTodos] = useState([]);
 
   const addTodo = arrayTodos => {
-    setAllTodos(arrayTodos);
+    let nuevoObjeto = [...arrayTodos];
+    setAllTodos(nuevoObjeto);
   };
 
   return (
