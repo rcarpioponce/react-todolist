@@ -1,25 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Container from "@material-ui/core/Container";
+import AddForm from "./components/AddForm";
+import ListTodo from "./components/ListTodo";
 
 function App() {
+  const [allTodos, setAllTodos] = useState([]);
+
+  const addTodo = arrayTodos => {
+    setAllTodos(arrayTodos);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container maxWidth="sm">
+      <h1>Todoist</h1>
+      <AddForm allTodos={allTodos} addTodo={addTodo} />
+      <ListTodo allTodos={allTodos} />
+    </Container>
   );
 }
 
