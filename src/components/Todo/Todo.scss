@@ -1,0 +1,23 @@
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  &:first-child {
+    border-top: 1px solid #cccccc;
+  }
+  span.todo-text {
+    margin-right: 20px;
+    &.tachado {
+      text-decoration: line-through;
+    }
+  }
+  .button-done {
+    margin-left: 20px;
+  }
+  .button-action {
+    margin-right: 5px;
+  }
+}

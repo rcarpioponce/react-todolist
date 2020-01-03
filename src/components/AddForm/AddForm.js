@@ -34,7 +34,7 @@ export default function AddForm(props) {
       <TextField id="input-add-todo" label="Todo" value={todo} />
       <Button
         className="button-add"
-        variant="contained"
+        variant="outlined"
         color="primary"
         type="submit"
       >
