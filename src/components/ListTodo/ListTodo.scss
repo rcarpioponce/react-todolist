@@ -1,9 +1,21 @@
 .list-todo {
   margin-top: 40px;
+  border:1px solid #ccc;
 }
 .list-header {
-  background-color: black;
+  background-color: #3f51b5;
   color: white;
-  width: 100%;
+  width: calc(100% - 40px);
   padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  span{
+    display: inline-block;
+    border-right:1px solid #CCC;
+    padding:0 20px;
+    &:last-child{
+      border-right:none;
+    }
+  }
 }

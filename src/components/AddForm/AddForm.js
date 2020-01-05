@@ -17,7 +17,8 @@ export default function AddForm(props) {
     if (todo !== "" && allTodos) {
       let arrTodos = [];
       arrTodos = allTodos;
-      arrTodos.push(todo);
+      let todoObj = {todo, status:false};
+      arrTodos.push(todoObj);
       addTodo(arrTodos);
       setTodo("");
     }

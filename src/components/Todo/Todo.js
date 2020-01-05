@@ -4,18 +4,19 @@ import Icon from "@material-ui/core/Icon";
 import "./Todo.scss";
 
 export default function Todo(props) {
-  const { todo } = props;
+  const { todo: {todo, status}, index, updateTodo, deleteTodo } = props;
 
-  const [done, setDone] = useState(false);
+  const [done, setDone] = useState(status);
 
   const changeDone = () => {
-    let newValDone = !done;
-    setDone(newValDone);
+    let newStatus = !done;
+    setDone(newStatus);
+    updateTodo(index,newStatus);
   };
 
-  const deleteTodo = () => {
+  const onDeleteTodo = () => {
     if (window.confirm(`¿estas seguro(a) de eliminar: ${todo}?`)) {
-      console.log(`${todo} eliminado correctamente`);
+      deleteTodo(index);
     }
   };
 
@@ -37,7 +38,7 @@ export default function Todo(props) {
           className="button-action"
           color="secondary"
           variant="outlined"
-          onClick={deleteTodo}
+          onClick={onDeleteTodo}
         >
           <Icon>delete</Icon>
         </Button>

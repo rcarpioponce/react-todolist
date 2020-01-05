@@ -1,12 +1,12 @@
 .todo {
-  width: 100%;
+  width: calc(100% - 40px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #eee;
   padding: 10px 20px;
   &:first-child {
-    border-top: 1px solid #cccccc;
+    border-top: 1px solid #eee;
   }
   span.todo-text {
     margin-right: 20px;
